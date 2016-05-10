@@ -1,0 +1,28 @@
+priority -60
+
+extends cpp
+
+priority -59
+
+snippet kernel "kernel" 
+__global__ void ${1:kernel_name} ($2,int N) {
+	int idx = threadIdx.x + blockIdx.x*blockDim.x;
+	if (idx >= N)
+		return;
+	$3
+}
+endsnippet
+
+snippet dfun "Device function"
+__device__ ${1:void} ${2:function_name} ($3) {
+
+	$4
+}
+endsnippet
+
+snippet afun "Host and device function"
+__device__ __host__ ${1:void} ${2:function_name} ($3) {
+
+	$4
+}
+endsnippet
