@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "Installing tools"
+
 mkdir -f ~/repos
 
 sudo apt-get install git gcc make pkg-config libx11-dev libxtst-dev libxi-dev -y

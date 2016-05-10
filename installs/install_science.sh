@@ -1,5 +1,7 @@
 #!/bin/sh
 
+echo "Installing science-related stuff"
+
 mkdir -f ~/repos
 
 sudo apt-get install python-numpy python-scipy python-matplotlib -y
