@@ -134,3 +134,8 @@ map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 " Treat long lines as break lines (useful when moving around in them).
 noremap <expr> j v:count > 1 ? 'm`' . v:count . 'j' : 'gj'
 noremap <expr> k v:count > 1 ? 'm`' . v:count . 'k' : 'gk'
+
+" Tab navigation like Firefox.
+nnoremap <Leader><S-tab> :tabprevious<CR>
+nnoremap <Leader><tab>   :tabnext<CR>
+nnoremap <Leader>t       :tabnew<CR>
