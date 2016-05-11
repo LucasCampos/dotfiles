@@ -49,6 +49,7 @@ set shiftwidth=4
 set shiftround
 set expandtab
 
+" General options
 set nocp " non vi compatible mode
 set number
 set relativenumber
@@ -62,7 +63,7 @@ set smartindent
 set autoindent
 set showcmd
 
-" compile latex as soon as saving
+" compile latex as soon as saving (NO LONGER NEEDED. vimtex  does that)
 " autocmd BufWritePost *.tex Dispatch! latexmk -pdf 
 
 " easier moving of code blocks
