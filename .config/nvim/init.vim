@@ -75,7 +75,7 @@ nnoremap <F5> :set spell! spelllang=en_us<CR>
 nnoremap <F6> :set spell! spelllang=pt_br<CR>
 
 " Change leader key
-let mapleader = ","
+let mapleader = " "
 
 " Allow copying to system clipboard
 set pastetoggle=<F2>
