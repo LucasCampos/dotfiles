@@ -58,7 +58,7 @@ plugins=(git command-not-found screen sudo)
 
 export PATH="$HOME/.bin:$HOME/.cabal/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
-export CUDA_HOME=/usr/local/cuda-7.5 
+export CUDA_HOME=/usr/local/cuda
 export LD_LIBRARY_PATH=${CUDA_HOME}/lib64 
  
 PATH=${CUDA_HOME}/bin:${PATH} 
