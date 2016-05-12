@@ -9,8 +9,8 @@ sudo apt-get install octave gnuplot-x11 -y
 sudo apt-get install libpng12-dev libfreetype6-dev libglfw-dev -y
 
 
-git clone https://github.com/LucasCampos/VIV ~/repos
-git clone https://github.com/LucasCampos/POPS ~/repos
+git clone https://github.com/LucasCampos/VIV ~/repos/VIV
+git clone https://github.com/LucasCampos/POPS ~/repos/POPS
 
 cd ~/repos
 
