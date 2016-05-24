@@ -5,6 +5,7 @@ echo "Installing science-related stuff"
 mkdir -f ~/repos
 
 sudo apt-get install python-numpy python-scipy python-matplotlib -y
+sudo apt-get install python3-numpy python3-scipy python3-matplotlib -y
 sudo apt-get install octave gnuplot-x11 -y
 sudo apt-get install libpng12-dev libfreetype6-dev libglfw-dev -y
 
