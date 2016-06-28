@@ -23,6 +23,7 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'tpope/vim-dispatch'
+Plugin 'JuliaLang/julia-vim'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -30,6 +31,17 @@ set background=dark
 " colorscheme monoacc
 " colorscheme oceandeep
 syntax on
+
+let g:isConcealToggled=0
+function ToggleConceal()
+    if g:isConcealToggled
+        set conceallevel=2
+        let g:isConcealToggled=0
+    else
+        set conceallevel=0
+        let g:isConcealToggled=2
+    endif
+endfunction
 
 " Bind movement on windows do ctrl 
 map <c-j> <c-w>j
@@ -71,6 +83,7 @@ vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
 
 " Allow dictionaries
+nnoremap <F2> :call ToggleConceal()<CR>
 nnoremap <F5> :set spell! spelllang=en_us<CR>
 nnoremap <F6> :set spell! spelllang=pt_br<CR>
 
