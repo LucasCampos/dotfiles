@@ -153,3 +153,5 @@ noremap <expr> k v:count > 1 ? 'm`' . v:count . 'k' : 'gk'
 nnoremap <Leader><S-tab> :tabprevious<CR>
 nnoremap <Leader><tab>   :tabnext<CR>
 nnoremap <Leader>t       :tabnew<CR>
+
+autocmd FileType tex :set tw=79
