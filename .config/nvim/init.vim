@@ -6,11 +6,13 @@ Plugin 'tpope/vim-commentary'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-obsession'
+Plugin 'kshenoy/vim-signature'
+Plugin 'LucasCampos/vim-template'
 
-Plugin 'rust-lang/rust.vim'
+" Plugin 'rust-lang/rust.vim'
 Plugin 'lervag/vimtex'
-Plugin 'klen/python-mode'
-Plugin 'vim-scripts/Efficient-python-folding'
+" Plugin 'klen/python-mode'
+" Plugin 'vim-scripts/Efficient-python-folding'
 
 Plugin 'severb/monoacc'
 Plugin 'vim-scripts/oceandeep'
@@ -23,7 +25,8 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
 
 Plugin 'tpope/vim-dispatch'
-Plugin 'JuliaLang/julia-vim'
+" Plugin 'JuliaLang/julia-vim'
+Plugin 'sheerun/vim-polyglot'
 call vundle#end()            " required
 filetype plugin indent on    " required
 
@@ -143,6 +146,9 @@ let g:pymode_syntax = 1
 let g:pymode_syntax_builtin_objs = 0
 let g:pymode_syntax_builtin_funcs = 0
 map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+
+" polyglot options
+let g:polyglot_disabled = ['latex']
 
 " Store relative line number jumps in the jumplist.
 " Treat long lines as break lines (useful when moving around in them).
