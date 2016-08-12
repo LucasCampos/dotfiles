@@ -1,5 +1,7 @@
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'VundleVim/Vundle.vim'
+
 Plugin 'ervandew/supertab'
 Plugin 'tpope/vim-abolish.git'
 Plugin 'tpope/vim-commentary'
