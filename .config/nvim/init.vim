@@ -10,6 +10,7 @@ Plugin 'honza/vim-snippets'
 Plugin 'tpope/vim-obsession'
 Plugin 'kshenoy/vim-signature'
 Plugin 'LucasCampos/vim-template'
+Plugin 'LucasCampos/vim-TodoMaker'
 
 " Plugin 'rust-lang/rust.vim'
 Plugin 'lervag/vimtex'
@@ -91,6 +92,9 @@ vnoremap > >gv  " better indentation
 nnoremap <F2> :call ToggleConceal()<CR>
 nnoremap <F5> :set spell! spelllang=en_us<CR>
 nnoremap <F6> :set spell! spelllang=pt_br<CR>
+
+" TODO Maker
+nnoremap <F3> :MakeTODO<CR>
 
 " Change leader key
 let mapleader = " "
