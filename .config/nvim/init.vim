@@ -166,4 +166,5 @@ nnoremap <Leader><S-tab> :tabprevious<CR>
 nnoremap <Leader><tab>   :tabnext<CR>
 nnoremap <Leader>t       :tabnew<CR>
 
+let g:tex_flavor = "latex"
 autocmd FileType tex :set tw=79
