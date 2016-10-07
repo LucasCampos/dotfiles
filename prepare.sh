@@ -16,6 +16,6 @@ cp -r .zshrc ~
 cp -r .spacemacs ~
 
 vim +PluginInstall +qall
-.vim/bundle/YouCompleteMe/install.py --clang-completer
+~/.vim/bundle/YouCompleteMe/install.py --clang-completer
 
 emacs --daemon
