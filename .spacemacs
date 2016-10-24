@@ -36,31 +36,35 @@ values."
      ;; Uncomment some layer names and press <SPC f e R> (Vim style) or
      ;; <M-m f e R> (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     helm
-     auto-completion
-     ;; better-defaults
-     emacs-lisp
-     python
-     haskell
-     bibtex
-     latex
+     ;; PROGRAMMING LANGUAGES
      c-c++
-     ;; git
-     markdown
+     emacs-lisp
+     extra-langs
+     haskell
+     python
+     rust
+     ;; MARKDOWN LANGUAGUES
+     bibtex
      org
-     ;; (shell :variables
-     ;;        shell-default-height 30
-     ;;        SHELL-DEFAULT-POSITION 'bottom)
-     ;; spell-checking
-     ;; (spell-checking :variables spell-checking-enable-auto-dictionary t)
+     latex
+     markdown
+     ;; TOOLS
+     auto-completion
+     helm
+     spell-checking
      syntax-checking
-     ;; version-control
+
+     (spell-checking :variables spell-checking-enable-auto-dictionary t)
+     (auto-completion :variables auto-completion-enable-snippets-in-popup t)
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
    ;; packages, then consider creating a layer. You can also put the
    ;; configuration in `dotspacemacs/user-config'.
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages
+   '(
+     cuda-mode
+     )
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
    ;; A list of packages that will not be installed and loaded.
@@ -311,7 +315,6 @@ you should place your code here."
   (setq org-agenda-files (list "~/Dropbox/org/work.org"
                                "~/Dropbox/org/home.org"))
   )
-
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
 (custom-set-variables
