@@ -56,6 +56,10 @@ values."
 
      (spell-checking :variables spell-checking-enable-auto-dictionary t)
      (auto-completion :variables auto-completion-enable-snippets-in-popup t)
+
+     ;; VIM-LIKE
+     vim-empty-lines
+     vim-powerline
      )
    ;; List of additional packages that will be installed without being
    ;; wrapped in a layer. If you need some configuration for these
@@ -301,6 +305,7 @@ before packages are loaded. If you are unsure, you should try in setting them in
 `dotspacemacs/user-config' first."
   (setq auto-completion-enable-help-tooltip t)
   (setq c-c++-enable-clang-support t)
+  (setq-default indicate-empty-lines t)
 )
 
 (defun dotspacemacs/user-config ()
@@ -312,6 +317,7 @@ explicitly specified that a variable should be set before a package is loaded,
 you should place your code here."
   (global-linum-mode)
   (add-hook 'doc-view-mode-hook 'auto-revert-mode)
+  (add-hook 'prog-mode-hook 'vi-tilde-fringe-mode)
   (setq org-agenda-files (list "~/Dropbox/org/work.org"
                                "~/Dropbox/org/home.org"))
   )
