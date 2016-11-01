@@ -95,7 +95,8 @@ source $ZSH/oh-my-zsh.sh
 # Run xcape once.
 if [ -z $XCAPE ]; then
   export XCAPE=1
-  xcape -e 'Caps_Lock=Escape'
+  setxkbmap -option ctrl:nocaps
+  xcape -e 'Control_L=Escape'
 fi
 
 # mkdir and cd
@@ -108,3 +109,4 @@ alias py='python -i ~/.startup.py'
 alias bpy='bpython -i ~/.startup.py'
 alias t='emacsclient -t'
 alias emacsd='emacs --daemon'
+alias vim='nvim'
