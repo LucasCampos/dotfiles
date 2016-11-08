@@ -15,7 +15,7 @@ cp -r .ycm_extra_conf.py ~
 cp -r .zshrc ~
 cp -r .spacemacs ~
 
-vim +PluginInstall +qall
+vim +qall
 ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
 
 emacs --daemon

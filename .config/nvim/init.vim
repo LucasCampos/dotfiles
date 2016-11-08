@@ -1,36 +1,39 @@
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+    silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+                \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    autocmd VimEnter * PlugInstall | source ~/.config/nvim/init.vim
+endif
 
-Plugin 'ervandew/supertab'
-Plugin 'tpope/vim-abolish.git'
-Plugin 'tpope/vim-commentary'
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'tpope/vim-obsession'
-Plugin 'kshenoy/vim-signature'
-Plugin 'LucasCampos/vim-template'
-Plugin 'LucasCampos/vim-TodoMaker'
+call plug#begin()
+Plug 'ervandew/supertab'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-commentary'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'kshenoy/vim-signature'
+Plug 'LucasCampos/vim-template'
 
-" Plugin 'rust-lang/rust.vim'
-Plugin 'lervag/vimtex'
-" Plugin 'klen/python-mode'
-" Plugin 'vim-scripts/Efficient-python-folding'
+Plug 'lervag/vimtex'
 
-Plugin 'severb/monoacc'
-Plugin 'vim-scripts/oceandeep'
+Plug 'majutsushi/tagbar'
+Plug 'xolox/vim-easytags'
+Plug 'xolox/vim-misc'
 
-Plugin 'yggdroot/indentline'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plug 'ctrlpvim/ctrlp.vim'
 
-Plugin 'scrooloose/syntastic'
-Plugin 'Valloric/YouCompleteMe'
+Plug 'severb/monoacc'
+Plug 'vim-scripts/oceandeep'
 
-Plugin 'tpope/vim-dispatch'
-" Plugin 'JuliaLang/julia-vim'
-Plugin 'sheerun/vim-polyglot'
-call vundle#end()            " required
+Plug 'yggdroot/indentline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'scrooloose/syntastic'
+Plug 'Valloric/YouCompleteMe'
+
+Plug 'tpope/vim-dispatch'
+Plug 'sheerun/vim-polyglot'
+call plug#end()            " required
 filetype plugin indent on    " required
 
 set background=dark
@@ -49,7 +52,7 @@ function ToggleConceal()
     endif
 endfunction
 
-" Bind movement on windows do ctrl 
+" Bind movement on windows do ctrl
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-h> <c-w>h
@@ -73,16 +76,13 @@ set number
 set relativenumber
 set hlsearch
 set ignorecase
-set smartcase  
+set smartcase
 set incsearch
-set hlsearch   
+set hlsearch
 set cindent
 set smartindent
 set autoindent
 set showcmd
-
-" compile latex as soon as saving (NO LONGER NEEDED. vimtex  does that)
-" autocmd BufWritePost *.tex Dispatch! latexmk -pdf 
 
 " easier moving of code blocks
 vnoremap < <gv  " better indentation
@@ -103,20 +103,14 @@ let mapleader = " "
 set pastetoggle=<F2>
 set clipboard=unnamed
 
-"Options for pandoc
-autocmd BufWritePost *.md Pandoc pdf
-
-"Options for syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-"let g:syntastic_always_populate_loc_list = 1
-"let g:syntastic_auto_loc_list = 1
+" Syntatic options
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_cpp_check_header = 1
+let g:syntastic_cpp_include_dirs = ['inc']
 let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_cpp_compiler_options = ' -std=c++11'
+
 
 "YouCompleteMeOptions
 let g:ycm_confirm_extra_conf = 0
@@ -130,11 +124,15 @@ let g:SuperTabDefaultCompletionType = '<C-n>'
 " " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
+let g:deoplete#enable_at_startup = 1
 
 " better key bindings for UltiSnipsExpandTrigger
 let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+" Toggle tagbar
+nmap <F3> :TagbarToggle<CR>
 
 " Ultisnips files
 autocmd FileType c UltiSnipsAddFiletypes c
@@ -144,15 +142,11 @@ autocmd FileType snippets UltiSnipsAddFiletypes snippets
 autocmd FileType tex UltiSnipsAddFiletypes tex
 autocmd FileType md UltiSnipsAddFiletypes markdown
 
-" python-mode plugins
-map <Leader>g :call RopeGotoDefinition()<CR>
-let g:pymode_rope = 0
-let g:pymode_breakpoint = 0
-let g:pymode_syntax = 1
-let g:pymode_syntax_builtin_objs = 0
-let g:pymode_syntax_builtin_funcs = 0
-map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
+" Vim-airline opitions
+set laststatus=2
+let g:airline_powerline_fonts = 2
+"
 " polyglot options
 let g:polyglot_disabled = ['latex']
 
