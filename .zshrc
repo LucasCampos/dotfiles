@@ -52,7 +52,7 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git command-not-found screen sudo)
+plugins=(command-not-found git screen sudo wd web-search)
 
 # User configuration
 
@@ -98,6 +98,11 @@ if [ -z $XCAPE ]; then
   setxkbmap -option ctrl:nocaps
   xcape -e 'Control_L=Escape'
 fi
+
+# Run tmux at startup
+#if command -v tmux>/dev/null; then
+#  [[ ! $TERM =~ screen ]] && [ -z $TMUX ] && exec tmux
+#fi
 
 # mkdir and cd
 function mkcd() { mkdir -p "$@" && cd "$_"; }
