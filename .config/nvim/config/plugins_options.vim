@@ -38,12 +38,18 @@ let g:easytags_suppress_report = 1
 " Vim-airline opitions
 set laststatus=2
 let g:airline_powerline_fonts = 2
-"
+
 " polyglot options
 let g:polyglot_disabled = ['latex']
 
+" Force tex to be latex and set linewidth
 let g:tex_flavor = "latex"
 autocmd FileType tex :set tw=79
 
+" Localvimrc options
 let g:localvimrc_ask=0
 let g:localvimrc_sandbox=0
+
+" Vim-template options
+let g:email="rmk236@gmail.com"
+let g:username="Lucas Costa Campos"
