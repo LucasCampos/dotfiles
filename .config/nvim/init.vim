@@ -28,7 +28,8 @@ Plug 'yggdroot/indentline'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
+Plug 'neomake/neomake'
 Plug 'Valloric/YouCompleteMe'
 
 Plug 'tpope/vim-dispatch'
@@ -103,14 +104,11 @@ let mapleader = " "
 set pastetoggle=<F2>
 set clipboard=unnamed
 
-" Syntatic options
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_cpp_check_header = 1
-let g:syntastic_cpp_include_dirs = ['inc']
-let g:syntastic_cpp_compiler = 'clang++'
-let g:syntastic_cpp_compiler_options = ' -std=c++11'
+" Neomake options
+let g:neomake_cpp_enable_markers=['clang']
+let g:neomake_cpp_clang_args = ["-std=c++14", "-Wextra", "-Wall", "-fsanitize=undefined","-g", "-I", "inc"]
 
+autocmd! BufWritePost * Neomake
 
 "YouCompleteMeOptions
 let g:ycm_confirm_extra_conf = 0
