@@ -32,6 +32,7 @@ Plug 'Valloric/YouCompleteMe'   " Autocompletion
 
 Plug 'sheerun/vim-polyglot'     " Big language pack
 Plug 'lervag/vimtex'            " Latex pack
+Plug 'matze/vim-tex-fold'       " Automatic Latex folding
 
 Plug 'embear/vim-localvimrc'    " Allows for the usage of local configurations
 call plug#end()        
