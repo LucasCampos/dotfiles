@@ -29,15 +29,20 @@ let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
+" Toggle NERDTree
+nmap <F3> :NERDTreeToggle <CR> 
+" <bar> wincmd p <CR>
+
 " Toggle tagbar
 let Tlist_Use_Right_Window   = 1
-nmap <F3> :TlistToggle<CR>
+nmap <F4> :TlistToggle<CR>
 autocmd! BufWritePost * :TlistUpdate
 let g:easytags_suppress_report = 1
 
 " Vim-airline opitions
 set laststatus=2
 let g:airline_powerline_fonts = 2
+" let g:airline#extensions#tabline#enabled = 1
 
 " polyglot options
 let g:polyglot_disabled = ['latex']

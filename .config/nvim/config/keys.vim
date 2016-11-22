@@ -8,9 +8,9 @@ map <c-h> <c-w>h
 map <c-l> <c-w>l
 
 " Quicksave command
-noremap <C-Z> :update<CR>
-vnoremap <C-Z> <C-C>:update<CR>
-inoremap <C-Z> <C-O>:update<CR>
+" noremap <C-Z> :update<CR>
+" vnoremap <C-Z> <C-C>:update<CR>
+" inoremap <C-Z> <C-O>:update<CR>
 
 " Store relative line number jumps in the jumplist.
 " Treat long lines as break lines (useful when moving around in them).
@@ -23,11 +23,13 @@ nnoremap <Leader><tab>   :tabnext<CR>
 nnoremap <Leader>t       :tabnew<CR>
 
 " easier moving of code blocks
-vnoremap < <gv  " better indentation
-vnoremap > >gv  " better indentation
+vnoremap < <gv  
+vnoremap > >gv  
+
+" Toggle and Untoggle conceal usage
+nnoremap <F2> :call ToggleConceal()<CR>
 
 " Allow dictionaries
-nnoremap <F2> :call ToggleConceal()<CR>
 nnoremap <F5> :set spell! spelllang=en_us<CR>
 nnoremap <F6> :set spell! spelllang=pt_br<CR>
 
