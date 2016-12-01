@@ -33,6 +33,9 @@ nnoremap <F2> :call ToggleConceal()<CR>
 nnoremap <F5> :set spell! spelllang=en_us<CR>
 nnoremap <F6> :set spell! spelllang=pt_br<CR>
 
+"Remove all trailing whitespace by pressing F5
+nnoremap <F7> :let _s=@/ <Bar> :%s/\s\+$//e <Bar> :let @/=_s <Bar> <CR> :echo "Cleaned trailing whitespace" <Bar> <CR>
+
 " Allow copying to system clipboard
 set clipboard=unnamed
 

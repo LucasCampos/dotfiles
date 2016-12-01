@@ -31,7 +31,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'vhdirk/vim-cmake'         " CMake integration
 Plug 'neomake/neomake'          " Linter
 Plug 'Valloric/YouCompleteMe'   " Autocompletion
-Plug 'vim-scripts/Conque-GDB'   " GDB integration
+" Plug 'vim-scripts/Conque-GDB'   " GDB integration
  
 Plug 'sheerun/vim-polyglot'     " Big language pack
 Plug 'lervag/vimtex'            " Latex pack
