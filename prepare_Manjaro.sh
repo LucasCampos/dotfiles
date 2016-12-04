@@ -19,3 +19,5 @@ nvim +qall
 ~/.vim/bundle/YouCompleteMe/install.py --clang-completer
 
 emacs --daemon
+
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
