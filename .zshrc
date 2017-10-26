@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/lucas/.oh-my-zsh
+export ZSH=/home/lcampos/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -56,7 +56,7 @@ plugins=(command-not-found git screen sudo wd web-search)
 
 # User configuration
 
-export PATH="$HOME/.bin:$HOME/.cabal/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="$HOME/.cargo/bin/:$HOME/.bin:$HOME/.cabal/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 
 export CUDA_HOME=/usr/local/cuda
 export LD_LIBRARY_PATH=${CUDA_HOME}/lib64 
@@ -95,7 +95,7 @@ source $ZSH/oh-my-zsh.sh
 # Run xcape once.
 if [ -z $XCAPE ]; then
   export XCAPE=1
-  setxkbmap -option ctrl:nocaps
+  # setxkbmap -option ctrl:nocaps
   xcape -e 'Control_L=Escape'
 fi
 
