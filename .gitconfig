@@ -1,6 +1,6 @@
 [user]
 	name = Lucas Campos
-	email = lqcc@df.ufpe.br
+	email = l.campos@fz-juelich.de
 
 [alias]
 	co = checkout
@@ -10,5 +10,10 @@
 	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 	type = cat-file -t
 	dump = cat-file -p
+	d = difftool
 [push]
 	default = simple
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
