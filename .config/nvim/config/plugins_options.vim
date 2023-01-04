@@ -1,12 +1,3 @@
-" Neomake options
-let g:neomake_cpp_enable_markers=['clang']
-let g:neomake_cpp_clang_args = ["-std=c++14", "-Wextra", "-Wall", "-fsanitize=undefined","-g", "-I", "inc"]
-let g:neomake_cpp_clangcheck_args = ["-std=c++14", "-Wextra", "-Wall", "-fsanitize=undefined","-g", "-I", "inc"]
-autocmd! BufWritePost * Neomake
-
-"YouCompleteMeOptions
-let g:ycm_confirm_extra_conf = 0
-let g:ycm_autoclose_preview_window_after_insertion = 1
 
 " make YCM compatible with UltiSnips (using supertab)
 let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
@@ -51,7 +42,7 @@ let g:airline_powerline_fonts = 2
 set t_Co=256
 
 " polyglot options
-let g:polyglot_disabled = ['latex']
+" let g:polyglot_disabled = ['latex']
 
 " Force tex to be latex and set linewidth
 let g:tex_flavor = "latex"
@@ -62,7 +53,7 @@ let g:localvimrc_ask=0
 let g:localvimrc_sandbox=0
 
 " Vim-template options
-let g:email="rmk236@gmail.com"
+let g:email="lucas.campos@tngtech.com"
 let g:username="Lucas Costa Campos"
 
 " Vim-comment options
